@@ -1,0 +1,147 @@
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ficha de cadastro - UBS CONECTA</title>
+    <link rel="shortcut icon" href="UBSCONECTA.png.png" type="image/x-icon">
+    <link rel="stylesheet" href="ficha.css">
+</head>
+
+<body>
+    <header>
+        <div class="logomarca">
+            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgf41pwBOzpV8SNo_nYFOdOALQ44OQ4b7UvVzKovz7TGHJqogyJ_ce8-MPmmr3lJuZpzsmEaelJ2c6ZZmJ2yM0a1foCkG8gHvr-DVrdCvhR7ZFl2fOUjuYYROwtCXpkP2DKMsBqxusFSozHhijh3Ne1ars5VFzzF-1WrKqMsklK3A1EaNhH-x3qAVrlOwI/s320-rw/UBS%20CONECTA%20-%20LOGO%20ORIGEM.png"
+                alt="Logomarca da UBS CONECTA" onclick="home('#')">
+            <a href="#" class="logo">UBS CONECTA</a>
+        </div>
+        <nav>
+            <a href="#" class="link">Início</a>
+            <a href="#contatos" class="link">Desenvolvedores</a>
+            <a href="ubs_conecta.html" class="link voltar">Voltar página inicial</a>
+        </nav>
+    </header>
+    <form action="#" method="post">
+        <div class="pt1">
+            <div id="perfil">
+                <img src="https://img.icons8.com/3d-fluent/1200/user-2.jpg" title="icone de usuario" id="fotinha">
+            </div>
+            <div class="form-coluna">
+                <label>Nome completo: <input type="text" name="nome" required
+                        placeholder="Digite seu nome completo..."></label>
+                <div class="form-linha">
+                    <label>CPF: <input type="text" name="cpf" required placeholder="XXX.XXX.XXX-XX"
+                            maxlength="14"></label>
+                    <label>RG: <input type="text" name="rg" placeholder="XX.XXX.XXX-X" maxlength="12"></label>
+                    <label>Data de nascimento: <input type="text" name="dn" required placeholder="XX/XX/XXXX"
+                            maxlength="10"></label>
+                    <label>Telefone/Celular: <input type="tel" name="tc" required placeholder="(XX) XXXXX-XXXX"
+                            maxlength="15"></label>
+                </div>
+                <label>Email completo: <input type="email" name="email" required
+                        placeholder="Digite seu e-mail..."></label>
+            </div>
+        </div>
+
+        <div class="pt2">
+            <div id="local">
+                <label>Estado:</label>
+                <select size="1" required>
+                    <option value="al">Alagoas</option>
+                    <option value="ba">Bahia</option>
+                    <option value="ce">Ceará</option>
+                    <option value="ma">Maranhão</option>
+                    <option value="pb">Paraíba</option>
+                    <option value="pe">Pernanbuco</option>
+                    <option value="pi">Piauí</option>
+                    <option value="rn" selected>Rio Grande do Norte</option>
+                    <option value="se">Sergipe</option>
+                </select>
+
+                <label>Cidade:</label>
+                <select size="1" required>
+                    <option value="bj">Brejinho</option>
+                    <option value="ma" selected>Monte Alegre</option>
+                    <option value="mo">Mossoró</option>
+                    <option value="nt">Natal</option>
+                    <option value="pa">Parnamirim</option>
+                    <option value="sa">Santo Antônio</option>
+                </select>
+
+                <label>UBS:</label>
+                <select size="1" required>
+                    <option value="hm">Hospital e Maternidade Dr. Lavoisier Maia</option>
+                    <option value="nm">UBS Novo Monte</option>
+                    <option value="ldm">UBS Lagoa do Mato</option>
+                    <option value="sl">UBS Santa Luzia</option>
+                    <option value="be">UBS Bairro da Esperança</option>
+                    <option value="bf">UBS Bairro das Flores</option>
+                    <option value="co">UBS Comum</option>
+                    <option value="fo">UBS Fontes</option>
+                    <option value="pg">UBS Professor Gaspar</option>
+                    <option value="so">UBS Sobrado</option>
+                </select>
+
+                <label>Tipos de Consultas</label>
+                <select size="1" required>
+                    <option value="dt">Dentista</option>
+                    <option value="vd">Visita e atendimento domiciliar</option>
+                    <option value="va">Vacinação</option>
+                    <option value="cr">Curativos</option>
+                    <option value="pp">Pré-natal e puerpério</option>
+                    <option value="tp">Teste do pezinho</option>
+                    <option value="sh">Teste de sífilis e HIV</option>
+                    <option value="tg">Teste de grávidez</option>
+                    <option value="pf">Planejamento familiar</option>
+                    <option value="ct">Controle do tabagismo</option>
+                    <option value="am">Atendimento médico</option>
+                    <option value="ou">Outro</option>
+                </select>
+            </div>
+            <label>Motivo: <textarea name="consulta" id="comentario"
+                    placeholder="Conte-nos o que estás sentido  e/ou o motivo da consulta..."></textarea></label>
+        </div>
+        <div class="botoes">
+            <button class="button-enviar" type="submit" onclick="en()">Enviar</button>
+            <button class="button-apagar" type="reset" onclick="lixo()">Apagar tudo</button>
+            <button class="button-ajuda" type="button" onclick="aj()">Ajuda?</button>
+        </div>
+    </form>
+
+    <footer id="contatos">
+        <section class="rs">
+            <h3><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj5TvGR-zlnBB30xqu97QrsccfD3eIqdewlSAeUScaXj29FXJ0uq0zFFrbfrn1j1QyLufME5KC0c2uQvMdDGJ-HWnk8oX9qK3_qIKpPBbKf8C8s4PiaEB4pUCLAb5O6mvAXRHPg6-5AwLs8YBwLxK_BhhPBA0jnGnregj8OSKLmxqIrqXKVAH0x6BKsf9Q/s320-rw/UBS%20CONECTA%20-%20Vermelho%20e%20amarelo.png"
+                    onclick="home('#')" class="logo">
+                UBS CONECTA</h3>
+            <p>UBS Conecta - conectando pessoas, saúde e tecnologia em um só lugar.</p>
+        </section>
+
+        <section>
+            <h3>Horários e locais</h3>
+            <p>Todos os horários e locais das Ubs's estão na aba de <strong id="vermelho">Unidades</strong>. Clique <a
+                    href="und.html">aqui!</a></p>
+        </section>
+
+        <section>
+            <h3>Contato dos desenvolvedores</h3>
+            <p>📩E-mail: ubs@conecta.com</p>
+            <p>📞Telefone: (84) 9 1234-5678</p>
+        </section>
+
+
+        <section class="rs">
+            <h3>Redes socias</h3>
+            <p><img
+                    src="https://static.vecteezy.com/system/resources/previews/018/930/415/non_2x/instagram-logo-instagram-icon-transparent-free-png.png">Instagram:
+                @ubsconecta.ofc</p>
+            <p><img
+                    src="https://static.vecteezy.com/system/resources/previews/018/930/476/non_2x/facebook-logo-facebook-icon-transparent-free-png.png">Facebook:
+                /UBS Conecta</p>
+        </section>
+        <p class="copy">© 2026 UBS CONECTA. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="ubs_conecta.js"></script>
+</body>
+
+</html>

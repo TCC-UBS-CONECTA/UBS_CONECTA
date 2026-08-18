@@ -1,0 +1,299 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+:root {
+    --sombra: 0px 8px 32px rgba(0, 0, 0, 0.5);
+    --cuiva: 17px;
+    --branco: #F8F9FA;
+    --azul: rgb(13, 71, 161);
+    --cinza: #333333;
+    --amarelo: rgb(253, 207, 22);
+    --vermei: rgb(228, 28, 33);
+    --verde: rgb(75, 174, 51);
+    --preto: rgb(0, 18, 25);
+
+}
+
+body {
+    min-height: 100vh;
+    padding-top: 20px;
+    background-image: url(https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiLWbkHuqLTJTewf1Mu5VR1fhSrtSgHyF9Ndg-MAEKv3pTnXkj7K4TLjmTYGTekxUDhzb1jOaqWL1AgEiHdwa0bvnflOhO420EoxGFamP8K3R3eS-Dq_smbIabTp8w6Sw-14XMcqLCdkHeRTMgQGJzSp4eKfRYNZVi85CH25rSXWwjBwzCLWZn5Y2tOgzM/s1600-rw/young-handsome-physician-medical-robe-with-stethoscope.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    line-height: 1.6;
+}
+
+.formulario {
+    width: 650px;
+    max-width: calc(100% - 40px);
+    margin: 40px auto;
+    background: rgba(255, 255, 255, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(10px);
+    box-shadow: var(--sombra);
+    border-radius: var(--cuiva);
+    color: var(--preto);
+    padding: 10px 3%;
+}
+
+.formulario h1 {
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.subtitulo {
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.caixa-formulario {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.caixa-formulario input {
+    width: 100%;
+    height: 50px;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    color: var(--preto);
+    background: rgba(255, 255, 255, 1);
+    font-size: 16px;
+    padding: 0 20px;
+}
+
+.caixa-formulario input::placeholder {
+    color: rgba(0, 0, 0, 0.75);
+}
+
+.caixa-formulario i {
+    position: absolute;
+    right: 20px;
+    top: 25%;
+    font-size: 20px;
+    color: var(--verde);
+}
+
+.caixa-lembrar-esqueci {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.caixa-lembrar-esqueci label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.caixa-lembrar-esqueci label input {
+    accent-color: var(--vermei);
+    cursor: pointer;
+}
+
+.caixa-lembrar-esqueci b,a {
+    text-decoration: none;
+    color: var(--preto);
+    cursor: pointer;
+}
+
+.caixa-lembrar-esqueci b,a:hover {
+    text-decoration: underline;
+}
+
+.termos{
+    text-decoration: underline ;
+    font-weight: bold;
+}
+button {
+    width: 100%;
+    height: 45px;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    background: #0D47A1;
+    outline: none;
+    font-size: 16px;
+    color: var(--branco);
+    font-weight: 600;
+    transition: all 0.3s;
+    box-shadow: 0 4px 15px rgba(13, 71, 161, .35);
+    margin-bottom: 10px;
+}
+
+button:hover {
+    background: #1565C0;
+    transform: translateY(-2px);
+}
+
+.icon-social {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.icon-social a {
+    font-size: 26px;
+    color: var(--preto);
+    border: 1px solid #001219;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    cursor: not-allowed;
+}
+
+.link-registro {
+    text-align: center;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+
+.link-registro a {
+    text-decoration: none;
+    color: var(--preto);
+    font-weight: bold;
+}
+
+.link-registro a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 480px) {
+
+    header {
+        padding: 10px 15px;
+    }
+
+    .logomarca {
+        gap: 6px;
+    }
+
+    .logo {
+        font-size: 17px;
+    }
+
+    header img {
+        width: 24px;
+    }
+
+    header nav {
+        gap: 8px;
+    }
+
+    header nav a {
+        font-size: 11px;
+    }
+
+    body {
+        padding-left: 12px;
+        padding-right: 12px;
+        padding-top: 80px;
+    }
+
+    .formulario {
+        padding: 60px 15px;
+        border-radius: 12px;
+    }
+
+    .formulario h1 {
+        font-size: 22px;
+    }
+
+    .caixa-lembrar-esqueci {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+}
+
+
+
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+    text-decoration: none;
+    color: var(--preto);
+}
+
+.logomarca {
+    display: flex;
+    gap: 10px;
+}
+
+header img {
+    width: 30px;
+    height: auto;
+    margin-right: 0;
+    cursor: pointer;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 5%;
+    z-index: 10;
+    position: fixed;
+    inset: 0 0 auto 0;
+}
+
+header nav {
+    display: flex;
+    gap: 20px;
+}
+
+header nav a {
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.3s;
+    border-top: 2px solid transparent;
+}
+
+header nav a:hover {
+    animation: descer 1s ease-in-out normal;
+}
+
+header nav a:focus {
+    border-top: 2px solid var(--vermei);
+    color: var(--vermei);
+    outline: none;
+}
+
+
+.btn-link {
+    color: #000;
+    cursor: pointer;
+}
+
+@keyframes descer {
+    0% {
+        transform: translateY(-2px);
+    }
+
+    50% {
+        transform: translateY(2px);
+    }
+
+    100% {
+        transform: translateY(-2px);
+    }
+}

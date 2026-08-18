@@ -1,0 +1,435 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --sombra: 0px 10px 40px rgba(0, 0, 0, 0.1);
+    --cuiva: 17px;
+    --branco: #f8f9fa;
+    --baby: #ade8f4;
+    --azul: #0D47A1;
+    --cinza: #333333;
+    --amarelo: #ffc600;
+    --vermei: oklch(60.825% 0.20898 27.013);
+    --verde: #008000;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: #222;
+    background-image: url(https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjX_A6dpkOtdt9kxXVI8RxeHSDiSfYr3Sdh3bmWifteR3VZJQobYAIgtORCt_C2-nuLowowz9pZoe5TNQ2jDpLnqfbAFarmLQ-cKW6f88KjqsUXDKixSJekwW0bY3MYF4KimacYQ2v_QbW1axMA7exrfBsKI6BjY4dzWgIhUcszLsJMQthconwi7MAHTRU/s7001/Fundokkkk.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: bottom;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    width: 100%;
+    max-width: 1200px;
+}
+
+.btn {
+    position: relative;
+    padding: 6.25px 7.5px;
+    border-radius: 7px;
+    text-align: center;
+    max-width: 280px;
+    overflow: hidden;
+
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+
+    transition: 0.5s;
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+
+}
+
+.btn::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, transparent 0%, rgba(229, 57, 53, 0.3) 100%, transparent 0%);
+    animation: passar 5s ease-in-out infinite;
+    z-index: 1;
+    pointer-events: none;
+}
+
+@keyframes passar {
+    0% {
+        transform: translateX(-100%) rotate(45deg);
+    }
+
+    100% {
+        transform: translateX(100%) rotate(45deg);
+    }
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    border-radius: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4), 0 0 40px rgba(168, 85, 247, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.15);
+}
+
+.btn h1 {
+    position: relative;
+    font-weight: 700;
+    font-size: 1.3rem;
+    color: #000;
+}
+
+/* 
+.btn:hover {
+    filter: brightness(0.9);
+    box-shadow: 0px 5px 10px 2px #000;
+    transform: translateY(-2px);
+} */
+
+.btn-botoes {
+    background: var(--vermei);
+    color: #fff;
+}
+
+.btn-botoes::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, transparent 0%, rgba(60, 92, 189, 1) 100%, transparent 0%);
+    animation: kissuck 5s ease-in-out infinite;
+    z-index: 1;
+    pointer-events: none;
+}
+
+@keyframes kissuck {
+    0% {
+        transform: translateX(-100%) rotate(45deg);
+    }
+
+    100% {
+        transform: translateX(100%) rotate(90deg);
+    }
+}
+
+.btn-botoes:hover {
+    box-shadow: 0px 5px 10px 2px #000;
+}
+
+.link {
+    background: #fff;
+    color: #000;
+    border: none;
+    cursor: pointer;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.logomarca {
+    display: flex;
+    gap: 10px;
+}
+
+header img {
+    width: 30px;
+    height: auto;
+    margin-right: 0;
+    cursor: pointer;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 5%;
+    background: #fff;
+    box-shadow: var(--sombra);
+    z-index: 999;
+    position: fixed;
+    inset: 0 0 auto 0;
+}
+
+header nav {
+    display: flex;
+    gap: 20px;
+}
+
+header nav a {
+    font-weight: 600;
+    transition: 0.3s;
+    border-radius: 0px 0px 5px 5px;
+}
+
+header nav a:hover {
+    border-top: 2px solid var(--vermei);
+    color: var(--vermei);
+}
+
+header nav a:focus {
+    border-top: 2px solid var(--vermei);
+    color: var(--vermei);
+    outline: none;
+}
+
+.ei {
+    color: var(--vermei);
+}
+
+.voltar {
+    color: var(--verde);
+}
+
+#perfil {
+    width: 270px;
+}
+
+#fotinha {
+    width: 250px;
+    height: 250px;
+    box-shadow: 0px 0px 10px 3px;
+    border-radius: 15px;
+}
+
+#fotinha:hover {
+    transform: scale(0.9);
+    transition: 0.3s;
+    box-shadow: 0px 0px 15px 5px purple;
+}
+
+form {
+    background-color: transparent;
+    width: 95%;
+    margin: 30px auto;
+    padding: 20px;
+    border-radius: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.pt1 {
+    margin-top: 30px;
+    display: flex;
+    gap: 30px;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: #8fdfee;
+    font-family: Arial, Helvetica, sans-serif;
+    box-shadow: 4px 4px 17px 2px;
+}
+
+.form-coluna {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.form-linha {
+    display: flex;
+    gap: 12px;
+}
+
+input {
+    background-color: #4dafd4;
+    border-radius: 20px;
+    border: 2px solid gray;
+    width: 100%;
+    padding: 15px;
+    font-size: 20px;
+    outline: none;
+}
+
+input:hover,
+select:hover,
+textarea:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+    border: 2px solid black;
+    transition: 0.2s;
+    box-shadow: 4px 4px 15px 5px;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 2px solid #d00000;
+    outline: none;
+}
+
+.pt2 {
+    margin-top: 30px;
+    display: flex;
+    gap: 40px;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: #8fdfee;
+    font-family: Arial, Helvetica, sans-serif;
+    box-shadow: 4px 4px 17px 2px;
+}
+
+#local {
+    width: 40%;
+}
+
+select {
+    width: 100%;
+    padding: 20px;
+    border-radius: 20px;
+    border: 2px solid gray;
+    background-color: #4dafd4;
+    margin-bottom: 20px;
+    font-size: 17px;
+}
+
+textarea {
+    width: 770px;
+    height: 380px;
+    border-radius: 20px;
+    padding: 15px;
+    background-color: #4dafd4;
+    border: 2px solid gray;
+    resize: none;
+    font-size: 17px;
+}
+
+textarea::placeholder,
+input::placeholder,
+select::placeholder {
+    font-size: 16px;
+    color: #6c757d;
+}
+
+label {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.botoes {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button-enviar,
+.button-apagar {
+    width: 110px;
+    height: 40px;
+    margin: 10px;
+    background-color: #4dafd4;
+    border-radius: 15px;
+    border: 2px solid white;
+    font-size: 15px;
+    cursor: pointer;
+    box-shadow: 4px 4px 7px 2px;
+    font-weight: bolder;
+}
+
+.button-ajuda {
+    width: 110px;
+    height: 40px;
+    margin: 10px;
+    background-color: #f9172b;
+    border-radius: 15px;
+    border: 2px solid white;
+    font-size: 15px;
+    cursor: pointer;
+    box-shadow: 4px 4px 7px 2px;
+    font-weight: bolder;
+}
+
+.button-enviar:hover,
+.button-apagar:hover,
+.button-ajuda:hover {
+    transform: scale(1.1);
+    transition: 0.3s;
+    border: none;
+    box-shadow: 4px 4px 15px 5px;
+    transform: translateY(-2px);
+}
+
+
+footer {
+    background: var(--cinza);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    padding: 60px 5% 20px;
+    color: #fff;
+    box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.9);
+}
+
+footer h3 {
+    color: var(--amarelo);
+}
+
+
+footer h3 img{
+    cursor: pointer;
+}
+footer img {
+    width: 30px;
+    height: 30px;
+    margin: 0;
+}
+
+.rs p {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.rs h3 {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.copy {
+    grid-column: 1/-1;
+    text-align: center;
+}
+
+footer #vermelho {
+    color: var(--vermei);
+}
+
+footer a {
+    text-decoration: underline var(--amarelo);
+}
