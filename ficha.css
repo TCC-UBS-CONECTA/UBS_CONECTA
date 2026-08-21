@@ -22,11 +22,7 @@ body {
     font-family: 'Poppins', sans-serif;
     line-height: 1.6;
     color: #222;
-    background-image: url(https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjX_A6dpkOtdt9kxXVI8RxeHSDiSfYr3Sdh3bmWifteR3VZJQobYAIgtORCt_C2-nuLowowz9pZoe5TNQ2jDpLnqfbAFarmLQ-cKW6f88KjqsUXDKixSJekwW0bY3MYF4KimacYQ2v_QbW1axMA7exrfBsKI6BjY4dzWgIhUcszLsJMQthconwi7MAHTRU/s7001/Fundokkkk.png);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: bottom;
+    background: #adb5bd;
     margin: 0;
 }
 
@@ -111,13 +107,6 @@ img {
     font-size: 1.3rem;
     color: #000;
 }
-
-/* 
-.btn:hover {
-    filter: brightness(0.9);
-    box-shadow: 0px 5px 10px 2px #000;
-    transform: translateY(-2px);
-} */
 
 .btn-botoes {
     background: var(--vermei);
@@ -224,14 +213,9 @@ header nav a:focus {
 #fotinha {
     width: 250px;
     height: 250px;
-    box-shadow: 0px 0px 10px 3px;
-    border-radius: 15px;
-}
-
-#fotinha:hover {
-    transform: scale(0.9);
-    transition: 0.3s;
-    box-shadow: 0px 0px 15px 5px purple;
+    cursor: no-drop;
+    object-fit: cover;
+    filter: drop-shadow(0px 10px 5px var(--cinza));
 }
 
 form {
@@ -249,7 +233,7 @@ form {
     gap: 30px;
     padding: 20px;
     border-radius: 20px;
-    background-color: #8fdfee;
+    background-color: #dee2e6;
     font-family: Arial, Helvetica, sans-serif;
     box-shadow: 4px 4px 17px 2px;
 }
@@ -267,7 +251,7 @@ form {
 }
 
 input {
-    background-color: #4dafd4;
+    background-color: #f8f9fa;
     border-radius: 20px;
     border: 2px solid gray;
     width: 100%;
@@ -299,7 +283,7 @@ textarea:focus {
     gap: 40px;
     padding: 20px;
     border-radius: 20px;
-    background-color: #8fdfee;
+    background-color: #dee2e6;
     font-family: Arial, Helvetica, sans-serif;
     box-shadow: 4px 4px 17px 2px;
 }
@@ -313,9 +297,13 @@ select {
     padding: 20px;
     border-radius: 20px;
     border: 2px solid gray;
-    background-color: #4dafd4;
+    background-color: #f8f9fa;
     margin-bottom: 20px;
     font-size: 17px;
+}
+
+input::placeholder {
+    color: rgba(0, 0, 0, 0.75);
 }
 
 textarea {
@@ -323,7 +311,7 @@ textarea {
     height: 380px;
     border-radius: 20px;
     padding: 15px;
-    background-color: #4dafd4;
+    background-color: #f8f9fa;
     border: 2px solid gray;
     resize: none;
     font-size: 17px;
@@ -345,6 +333,12 @@ label {
     display: flex;
     align-items: center;
     justify-content: center;
+    background: #dee2e6;
+    margin: 10px auto;
+    padding: 10px 15px;
+    border-radius: 10px;
+    width: fit-content;
+    box-shadow: 4px 4px 17px 2px;
 }
 
 .button-enviar,
@@ -352,12 +346,10 @@ label {
     width: 110px;
     height: 40px;
     margin: 10px;
-    background-color: #4dafd4;
     border-radius: 15px;
-    border: 2px solid white;
+    border: 1px solid #ffffff;
     font-size: 15px;
     cursor: pointer;
-    box-shadow: 4px 4px 7px 2px;
     font-weight: bolder;
 }
 
@@ -365,12 +357,10 @@ label {
     width: 110px;
     height: 40px;
     margin: 10px;
-    background-color: #f9172b;
     border-radius: 15px;
-    border: 2px solid white;
+    border: 1px solid #ffffff;
     font-size: 15px;
     cursor: pointer;
-    box-shadow: 4px 4px 7px 2px;
     font-weight: bolder;
 }
 
@@ -380,7 +370,7 @@ label {
     transform: scale(1.1);
     transition: 0.3s;
     border: none;
-    box-shadow: 4px 4px 15px 5px;
+    box-shadow: 0px 0px 6px 1px #000000;
     transform: translateY(-2px);
 }
 
@@ -400,9 +390,10 @@ footer h3 {
 }
 
 
-footer h3 img{
+footer h3 img {
     cursor: pointer;
 }
+
 footer img {
     width: 30px;
     height: 30px;
@@ -432,4 +423,217 @@ footer #vermelho {
 
 footer a {
     text-decoration: underline var(--amarelo);
+}
+
+@media (max-width: 900px) {
+
+    header {
+        padding: 12px 3%;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    header nav {
+        gap: 10px;
+    }
+
+    header nav a {
+        font-size: 14px;
+    }
+
+    form {
+        width: 95%;
+        padding: 10px;
+    }
+
+    .pt1 {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    #perfil {
+        width: 180px;
+        text-align: center;
+    }
+
+    #fotinha {
+        width: 160px;
+        height: 160px;
+    }
+
+    .form-coluna {
+        width: 100%;
+    }
+
+    .form-linha {
+        flex-wrap: wrap;
+    }
+
+    .form-linha label {
+        flex: 1 1 45%;
+    }
+
+    .pt2 {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    #local {
+        width: 100%;
+    }
+
+    textarea {
+        width: 100%;
+        height: 250px;
+    }
+
+    footer {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+}
+@media (max-width: 600px) {
+
+    body {
+        overflow-x: hidden;
+    }
+
+    header {
+        position: relative;
+        flex-direction: column;
+        gap: 10px;
+        padding: 12px 15px;
+        text-align: center;
+    }
+
+    .logomarca {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    header nav {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    header nav a {
+        font-size: 13px;
+        padding: 5px;
+    }
+
+
+    form {
+        width: 100%;
+        padding: 10px;
+        margin: 10px auto;
+    }
+
+    .pt1 {
+        margin-top: 10px;
+        padding: 15px;
+        border-radius: 15px;
+    }
+
+    #perfil {
+        width: 130px;
+    }
+
+    #fotinha {
+        width: 120px;
+        height: 120px;
+    }
+
+    .form-coluna {
+        gap: 15px;
+    }
+
+    .form-linha {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .form-linha label {
+        width: 100%;
+        flex: none;
+    }
+
+
+    input {
+        width: 100%;
+        padding: 12px;
+        font-size: 16px;
+    }
+
+    label {
+        font-size: 16px;
+    }
+
+    .pt2 {
+        margin-top: 20px;
+        padding: 15px;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    #local {
+        width: 100%;
+    }
+
+    select {
+        padding: 14px;
+        font-size: 15px;
+        margin-bottom: 15px;
+    }
+
+    textarea {
+        width: 100%;
+        height: 220px;
+        padding: 12px;
+        font-size: 15px;
+    }
+
+
+    .botoes {
+        width: 100%;
+        padding: 8px;
+        flex-wrap: wrap;
+        gap: 5px;
+    }
+
+    .button-enviar,
+    .button-apagar,
+    .button-ajuda {
+        width: 100px;
+        margin: 5px;
+    }
+
+    footer {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        padding: 40px 20px 20px;
+        text-align: center;
+    }
+
+    footer section {
+        width: 100%;
+    }
+
+    .rs p,
+    .rs h3 {
+        justify-content: center;
+    }
+
+    .copy {
+        grid-column: 1;
+        font-size: 13px;
+    }
 }
