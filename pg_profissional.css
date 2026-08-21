@@ -101,7 +101,7 @@ header {
     align-items: center;
     justify-content: space-between;
     padding: 15px 5%;
-    background: var(--verde);
+    background: var(--azul);
     box-shadow: var(--sombra);
     z-index: 999;
     position: fixed;
@@ -199,7 +199,7 @@ main h2 {
 }
 
 button {
-    background-color: #198754;
+    background-color: var(--azul);
     color: white;
     border: none;
     padding: 10px;
