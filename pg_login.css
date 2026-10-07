@@ -183,7 +183,12 @@ button:hover {
     }
 
     .logomarca {
-        gap: 6px;
+        gap: 56px;
+    }
+
+    .logomarca img{
+        width: 55px;
+        height: auto;
     }
 
     .logo {
