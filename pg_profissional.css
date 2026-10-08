@@ -158,7 +158,7 @@ aside a {
 }
 
 aside a:hover {
-    background-color: var(--azul);
+    background-color: #198754;
     color: white;
 }
 
