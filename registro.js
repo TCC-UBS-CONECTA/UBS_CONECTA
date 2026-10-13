@@ -27,3 +27,22 @@ formulario.addEventListener("submit", async function(event){
         window.location.href = "pg_paciente.html";
     }
 });
+
+
+function configurarOlho(idCampo, idBotao) {
+    const campoSenha = document.querySelector(idCampo);
+    const btn = document.querySelector(idBotao);
+
+    btn.addEventListener('click', function () {
+        if (campoSenha.type === 'password') {
+            campoSenha.type = 'text';
+            btn.innerHTML = '<i class="bxf bx-eye-slash"></i>';
+        } else {
+            campoSenha.type = 'password';
+            btn.innerHTML = '<i class="bxf bx-eye"></i>';
+        }
+    });
+}
+
+configurarOlho('#senha', '#btn-visualizar-senha');
+configurarOlho('#confirmarSenha', '#btn-confirmar-senha');
