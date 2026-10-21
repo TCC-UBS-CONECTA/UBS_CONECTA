@@ -11,7 +11,7 @@ formulario.addEventListener("submit", async function(event){
     alert("As senhas não coincidem, tente novamente.");
     return;}
 
-    const resposta = await fetch("http://localhost:8080/api/usuarios",{
+    const resposta = await fetch("http://10.0.0.114:8080/api/usuarios", {
         method: "POST",
         headers:{
             "Content-Type": "application/json"
@@ -46,3 +46,16 @@ function configurarOlho(idCampo, idBotao) {
 
 configurarOlho('#senha', '#btn-visualizar-senha');
 configurarOlho('#confirmarSenha', '#btn-confirmar-senha');
+
+
+const botoesUsuario = document.querySelectorAll('.tipo-usuario button');
+
+botoesUsuario.forEach(botao => {
+    botao.addEventListener('click', () => {
+        // deixa sem o ativo, sem cor
+        botoesUsuario.forEach(b => b.classList.remove('ativo'));
+        
+        // Quando clicaado o ativo aparece
+        botao.classList.add('ativo');
+    });
+});

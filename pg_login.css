@@ -330,3 +330,25 @@ header nav a:focus {
 #senha {
     padding-right: 55px;
 }
+
+/* Botões de escolha do tipo de usuario= PACIENTE OU PROFISSIONAL */
+.tipo-usuario {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.tipo-usuario button {
+    background: var(--branco);
+    border: none;
+    border-radius: none;
+    color: #111;
+    cursor: pointer; /* Adiciona a mãozinha ao passar o mouse */
+    transition: background 0.2s, color 0.2s; /* Deixa a troca de cor suave */
+}
+
+/* Mudamos de :active para uma classe .ativo fixa */
+.tipo-usuario button.ativo {
+    background: var(--azul);
+    color: var(--branco);
+}
