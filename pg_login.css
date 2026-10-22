@@ -108,20 +108,23 @@ body {
     cursor: pointer;
 }
 
-.caixa-lembrar-esqueci b,a {
+.caixa-lembrar-esqueci b,
+a {
     text-decoration: none;
     color: var(--preto);
     cursor: pointer;
 }
 
-.caixa-lembrar-esqueci b,a:hover {
+.caixa-lembrar-esqueci b,
+a:hover {
     text-decoration: underline;
 }
 
-.termos{
-    text-decoration: underline ;
+.termos {
+    text-decoration: underline;
     font-weight: bold;
 }
+
 button {
     width: 100%;
     height: 45px;
@@ -192,7 +195,10 @@ button:hover {
     }
 
     header img {
-        width: 24px;
+        width: 48px;
+        height: auto;
+        margin-right: 0;
+        cursor: pointer;
     }
 
     header nav {
@@ -241,7 +247,7 @@ button:hover {
 }
 
 header img {
-    width: 30px;
+    width: 57px;
     height: auto;
     margin-right: 0;
     cursor: pointer;
@@ -298,7 +304,9 @@ header nav a:focus {
         transform: translateY(-2px);
     }
 }
-#btn-visualizar-senha, #btn-confirmar-senha {
+
+#btn-visualizar-senha,
+#btn-confirmar-senha {
     position: absolute;
     right: 10px;
     top: 50%;
@@ -343,11 +351,10 @@ header nav a:focus {
     border: none;
     border-radius: none;
     color: #111;
-    cursor: pointer; /* Adiciona a mãozinha ao passar o mouse */
-    transition: background 0.2s, color 0.2s; /* Deixa a troca de cor suave */
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
 }
 
-/* Mudamos de :active para uma classe .ativo fixa */
 .tipo-usuario button.ativo {
     background: var(--azul);
     color: var(--branco);

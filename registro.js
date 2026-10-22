@@ -1,31 +1,60 @@
 const formulario = document.querySelector("form");
 
-formulario.addEventListener("submit", async function(event){
-   event.preventDefault(); 
+formulario.addEventListener("submit", async function (event) {
+    event.preventDefault();
 
-   const login = document.querySelector("#login").value;
-   const senha = document.querySelector("#senha").value;
-   const confirmarSenha = document.querySelector("#confirmarSenha").value;
+    if (!tipoSelecionado) {
+        alert("Selecione Paciente ou Profissional.");
+        return;
+    }
 
-   if(senha !== confirmarSenha){
-    alert("As senhas não coincidem, tente novamente.");
-    return;}
+    const login = document.querySelector("#login").value;
+    const senha = document.querySelector("#senha").value;
+    const confirmarSenha = document.querySelector("#confirmarSenha").value;
 
-    const resposta = await fetch("http://10.0.0.114:8080/api/usuarios", {
+    if (senha !== confirmarSenha) {
+        alert("As senhas não coincidem, tente novamente.");
+        return;
+    }
+    
+const API = "http://localhost:8080";
+
+try {
+    const resposta = await fetch(`${API}/api/usuarios`, {
         method: "POST",
-        headers:{
+        headers: {
             "Content-Type": "application/json"
         },
-        body: JSON.stringify({login, senha})
-    });    
+        body: JSON.stringify({
+            login,
+            senha,
+            tipoUsuario: tipoSelecionado
+        })
+    });
 
     const dados = await resposta.json();
-    
-    if (resposta.ok){
+
+    if (resposta.ok) {
         alert("Cadastro realizado com sucesso!");
-        formulario.reset();
-        window.location.href = "pg_paciente.html";
+
+        window.location.href =
+            "completar_perfil.html?idUsuario=" +
+            encodeURIComponent(dados.id) +
+            "&tipo=" +
+            encodeURIComponent(tipoSelecionado);
+    } else {
+        alert(
+            dados.erro ||
+            dados.mensagem ||
+            "Erro ao realizar cadastro."
+        );
     }
+
+} catch (erro) {
+    console.error("Erro no cadastro:", erro);
+    alert("Não foi possível conectar ao servidor.");
+}
+
 });
 
 
@@ -48,14 +77,21 @@ configurarOlho('#senha', '#btn-visualizar-senha');
 configurarOlho('#confirmarSenha', '#btn-confirmar-senha');
 
 
-const botoesUsuario = document.querySelectorAll('.tipo-usuario button');
 
-botoesUsuario.forEach(botao => {
-    botao.addEventListener('click', () => {
-        // deixa sem o ativo, sem cor
-        botoesUsuario.forEach(b => b.classList.remove('ativo'));
-        
-        // Quando clicaado o ativo aparece
-        botao.classList.add('ativo');
+let tipoSelecionado = "";
+
+const botoesUsuario = document.querySelectorAll(".tipo-usuario button");
+
+botoesUsuario.forEach(function (botao) {
+    botao.addEventListener("click", function () {
+        tipoSelecionado = botao.value;
+
+        botoesUsuario.forEach(function (outroBotao) {
+            outroBotao.classList.remove("ativo");
+        });
+
+        botao.classList.add("ativo");
+
+        console.log("Tipo selecionado:", tipoSelecionado);
     });
 });

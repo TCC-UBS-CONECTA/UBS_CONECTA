@@ -6,18 +6,15 @@ formulario.addEventListener("submit", async function (event) {
 
     const login = document.querySelector("#login").value;
     const senha = document.querySelector("#senha").value;
-
+    const API = "http://localhost:8080";
     try {
-        const resposta = await fetch(
-            "http://10.0.0.114:8080/api/usuarios/login",
-            {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json"
-                },
-                body: JSON.stringify({ login, senha })
-            }
-        );
+        const resposta = await fetch(`${API}/api/usuarios/login`, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({ login, senha })
+        });
 
         const dados = await resposta.json();
 
@@ -38,8 +35,8 @@ formulario.addEventListener("submit", async function (event) {
         }
 
     } catch (erro) {
-        alert("Não foi possível conectar ao servidor. Tente novamente.");
         console.error("Erro no login:", erro);
+        alert("Falha na comunicação com o servidor. Confira o Console (F12).");
     }
 });
 

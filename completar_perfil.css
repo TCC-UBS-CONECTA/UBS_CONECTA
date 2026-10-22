@@ -1,0 +1,367 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap");
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --sombra: 0px 12px 36px rgba(0, 18, 25, 0.25);
+    --sombra-card: 0px 6px 20px rgba(0, 0, 0, 0.08);
+    --curva: 16px;
+    --curva-input: 10px;
+    --branco: #FFFFFF;
+    --branco-transparente: rgba(255, 255, 255, 0.72);
+    --azul: #0D47A1;
+    --azul-hover: #1565C0;
+    --azul-claro: #E3F2FD;
+    --verde: #2E7D32;
+    --verde-suave: #E8F5E9;
+    --cinza-escuro: #333333;
+    --cinza-texto: #555555;
+    --cinza-borda: #E0E0E0;
+    --vermei: #E41C21;
+    --preto: #001219;
+}
+
+body {
+    min-height: 100vh;
+    padding-top: 90px;
+    padding-bottom: 40px;
+    background-image: url(https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiLWbkHuqLTJTewf1Mu5VR1fhSrtSgHyF9Ndg-MAEKv3pTnXkj7K4TLjmTYGTekxUDhzb1jOaqWL1AgEiHdwa0bvnflOhO420EoxGFamP8K3R3eS-Dq_smbIabTp8w6Sw-14XMcqLCdkHeRTMgQGJzSp4eKfRYNZVi85CH25rSXWwjBwzCLWZn5Y2tOgzM/s1600-rw/young-handsome-physician-medical-robe-with-stethoscope.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    line-height: 1.6;
+    color: var(--preto);
+}
+
+/* Header Fixo e Elegante */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 5%;
+    z-index: 100;
+    position: fixed;
+    inset: 0 0 auto 0;
+    background: rgba(255, 255, 255, 0.88);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+}
+
+.logomarca {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+header img {
+    width: 32px;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+header img:hover {
+    transform: scale(1.08);
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: 700;
+    text-decoration: none;
+    color: var(--azul);
+    letter-spacing: 0.5px;
+}
+
+header nav {
+    display: flex;
+    gap: 20px;
+}
+
+.btn-link {
+    text-decoration: none;
+    color: var(--cinza-escuro);
+    font-weight: 600;
+    font-size: 15px;
+    transition: color 0.3s ease;
+    padding: 4px 0;
+}
+
+.btn-link:hover {
+    color: var(--azul);
+}
+
+/* Container Principal em Efeito Acrílico (Glassmorphism) */
+.container-perfil {
+    width: 780px;
+    max-width: calc(100% - 32px);
+    margin: 20px auto;
+    background: var(--branco-transparente);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    box-shadow: var(--sombra);
+    border-radius: var(--curva);
+    padding: 35px 40px;
+    animation: surgimentoSuave 0.6s ease-out forwards;
+}
+
+/* Cabeçalho do Perfil */
+.header-perfil {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.header-perfil h1 {
+    font-size: 30px;
+    color: var(--azul);
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.badge-tipo {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--azul-claro);
+    color: var(--azul);
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 12px;
+    border: 1px solid rgba(13, 71, 161, 0.15);
+}
+
+.badge-tipo i {
+    font-size: 18px;
+}
+
+.subtitulo {
+    color: var(--cinza-texto);
+    font-size: 15px;
+}
+
+/* Estilização das Seções/Cards internos */
+.secao-card {
+    background: rgba(255, 255, 255, 0.85);
+    border-radius: var(--curva);
+    padding: 24px;
+    margin-bottom: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.9);
+    box-shadow: var(--sombra-card);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.secao-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.secao-titulo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--azul-claro);
+}
+
+.secao-titulo i {
+    font-size: 24px;
+    color: var(--azul);
+}
+
+.secao-titulo h2 {
+    font-size: 18px;
+    color: var(--azul);
+    font-weight: 600;
+}
+
+/* Quando for a seção do profissional */
+.secao-profissional .secao-titulo {
+    border-bottom-color: var(--verde-suave);
+}
+
+.secao-profissional .secao-titulo i,
+.secao-profissional .secao-titulo h2 {
+    color: var(--verde);
+}
+
+/* Grid de Formulários */
+.grid-campos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+.campo-full {
+    grid-column: span 2;
+}
+
+/* Rótulos e Campos de Entrada */
+.campo-grupo {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.campo-grupo label {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--cinza-escuro);
+}
+
+.obrigatorio {
+    color: var(--vermei);
+}
+
+.input-com-icone,
+.select-com-icone {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input-com-icone input,
+.select-com-icone select {
+    width: 100%;
+    height: 48px;
+    border: 1.5px solid var(--cinza-borda);
+    border-radius: var(--curva-input);
+    padding: 0 16px 0 44px;
+    font-size: 15px;
+    color: var(--preto);
+    background: #FFFFFF;
+    outline: none;
+    transition: all 0.25s ease-in-out;
+}
+
+.select-com-icone select {
+    appearance: none;
+    -webkit-appearance: none;
+    cursor: pointer;
+}
+
+.input-com-icone input::placeholder {
+    color: #999;
+}
+
+/* Ícones nos Campos */
+.input-com-icone i,
+.select-com-icone i {
+    position: absolute;
+    left: 14px;
+    font-size: 20px;
+    color: var(--azul);
+    pointer-events: none;
+    transition: color 0.25s ease;
+}
+
+.select-com-icone i.bx-chevron-down {
+    left: auto;
+    right: 14px;
+}
+
+.secao-profissional .input-com-icone i,
+.secao-profissional .select-com-icone i {
+    color: var(--verde);
+}
+
+/* Efeito ao Focar nos Inputs */
+.input-com-icone input:focus,
+.select-com-icone select:focus {
+    border-color: var(--azul);
+    box-shadow: 0 0 0 4px rgba(13, 71, 161, 0.12);
+}
+
+.secao-profissional .input-com-icone input:focus,
+.secao-profissional .select-com-icone select:focus {
+    border-color: var(--verde);
+    box-shadow: 0 0 0 4px rgba(46, 125, 50, 0.12);
+}
+
+/* Botão Principial de Ação */
+.acoes-formulario {
+    margin-top: 30px;
+}
+
+.btn-salvar {
+    width: 100%;
+    height: 52px;
+    border: none;
+    border-radius: var(--curva-input);
+    background: linear-gradient(135deg, var(--azul) 0%, #1565C0 100%);
+    color: var(--branco);
+    font-size: 17px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    box-shadow: 0 6px 20px rgba(13, 71, 161, 0.35);
+    transition: all 0.3s ease;
+}
+
+.btn-salvar i {
+    font-size: 22px;
+}
+
+.btn-salvar:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(13, 71, 161, 0.45);
+    background: linear-gradient(135deg, #1565C0 0%, #0D47A1 100%);
+}
+
+.btn-salvar:active {
+    transform: translateY(0);
+}
+
+/* Animações e Efeitos */
+@keyframes surgimentoSuave {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsividade para Dispositivos Móveis */
+@media (max-width: 600px) {
+    body {
+        padding-top: 80px;
+    }
+
+    .container-perfil {
+        padding: 24px 18px;
+    }
+
+    .header-perfil h1 {
+        font-size: 24px;
+    }
+
+    .grid-campos {
+        grid-template-columns: 1fr;
+    }
+
+    .campo-full {
+        grid-column: span 1;
+    }
+
+    header nav {
+        gap: 12px;
+    }
+
+    .btn-link {
+        font-size: 13px;
+    }
+}
