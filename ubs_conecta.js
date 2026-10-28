@@ -74,16 +74,6 @@ function fazer() {
 }
 
 
-function en() {
-    window.alert("Enviando sua ficha...");
-}
-function lixo() {
-    window.alert("Apagando tudo...");
-}
-function aj() {
-    window.alert("Preencha todos os campos abaixo corretamente e clique em enviar para completar seu cadastro. O seu cadastro será analisado pela UBS escolhida e você será informado em breve pelo seu e-mail e/ou telefone que você adicionou no cadastro.");
-}
-
 
 function logado(){
     window.alert("Você não está logado!");

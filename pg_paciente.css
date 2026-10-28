@@ -133,6 +133,7 @@ header nav a:focus {
 
 .container {
     display: flex;
+    padding-top: 67px;
 }
 
 aside {

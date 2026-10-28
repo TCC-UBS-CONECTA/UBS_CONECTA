@@ -21,8 +21,14 @@ formulario.addEventListener("submit", async function (event) {
         console.log("Status:", resposta.status);
         console.log("Resposta do backend:", dados);
 
+
         if (resposta.ok) {
             alert(dados.mensagem);
+
+            // Guarda a identificação da conta conectada
+            sessionStorage.setItem("idUsuario", dados.idUsuario);
+            sessionStorage.setItem("tipoUsuario", dados.tipoUsuario);
+
             formulario.reset();
 
             if (dados.tipoUsuario === "PACIENTE") {
@@ -33,6 +39,7 @@ formulario.addEventListener("submit", async function (event) {
         } else {
             alert(dados.mensagem);
         }
+
 
     } catch (erro) {
         console.error("Erro no login:", erro);

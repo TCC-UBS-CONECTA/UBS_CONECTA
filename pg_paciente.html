@@ -51,7 +51,7 @@
         </aside>
 
         <main>
-            <h2>Olá, Paciente!</h2>
+            <h2>Olá, <span id="nome-paciente"> Paciente</span>!</h2>
             <p>Bem-vindo à sua área de saúde.</p>
 
             <section class="cards">
@@ -79,9 +79,10 @@
 
             <section class="perfil">
                 <h3>Informações do Paciente</h3>
-                <p><strong>Nome:</strong> João da Silva</p>
-                <p><strong>Idade:</strong> 25 anos</p>
-                <p><strong>Telefone:</strong> (84) 99999-9999</p>
+                <p><strong>Nome:</strong> <span id="perfil-nome">Carregando...</span></p>
+                <p><strong>Idade:</strong> <span id="perfil-idade">Carregando...</span></p>
+                <p><strong>Telefone:</strong> <span id="perfil-telefone">Carregando...</span></p>
+                <p><strong>Email:</strong> <span id="perfil-email">Carregando...</span></p>
 
             </section>
         </main>
@@ -90,5 +91,6 @@
     <footer>
         <p class="copy">© 2026 UBS CONECTA. Todos os direitos reservados.</p>
     </footer>
+    <script src="pg_paciente.js"></script>
 </body>
 </html>

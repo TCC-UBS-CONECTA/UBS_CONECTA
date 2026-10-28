@@ -9,6 +9,8 @@
         type="image/x-icon">
     <link rel="stylesheet" href="ficha.css">
     <script src="https://kit.fontawesome.com/ea68365d10.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.boxicons.com/3.0.8/fonts/basic/boxicons.min.css" rel="stylesheet">
+    <link href="https://cdn.boxicons.com/3.0.8/fonts/filled/boxicons-filled.min.css" rel="stylesheet">
 </head>
 
 <body>
@@ -25,24 +27,24 @@
         </nav>
     </header>
 
-    <form action="#" method="post">
+    <form id="form-ficha">
         <div class="pt1">
             <div id="perfil">
                 <i class="fa-solid fa-user-pen" id="fotinha"></i>
             </div>
             <div class="form-coluna">
-                <label>Nome completo: <input type="text" name="nome" required
+                <label>Nome completo: <input type="text" id="nome" name="nome" required
                         placeholder="Digite seu nome completo..."></label>
                 <div class="form-linha">
-                    <label>CPF: <input type="text" name="cpf" required placeholder="XXX.XXX.XXX-XX"
+                    <label>CPF: <input type="text" id="cpf" name="cpf" required placeholder="XXX.XXX.XXX-XX"
                             maxlength="14"></label>
-                    <label>RG: <input type="text" name="rg" placeholder="XX.XXX.XXX-X" maxlength="12"></label>
-                    <label>Nascimento: <input type="text" name="dn" required placeholder="XX/XX/XXXX"
-                            maxlength="10"></label>
-                    <label>Telefone/Celular: <input type="tel" name="tc" required placeholder="(XX) XXXXX-XXXX"
-                            maxlength="15"></label>
+                    <label>RG: <input type="text" id="rg" name="rg" placeholder="XX.XXX.XXX-X" maxlength="12"></label>
+                    <label>Nascimento: <input type="date" id="dataNascimento" name="dataNascimento" required
+                            placeholder="XX/XX/XXXX" maxlength="10"></label>
+                    <label>Telefone/Celular: <input type="tel" id="telefone" name="telefone" required
+                            placeholder="(XX) XXXXX-XXXX" maxlength="15"></label>
                 </div>
-                <label>Email completo: <input type="email" name="email" required
+                <label>Email completo: <input type="email" id="email" name="email" required
                         placeholder="Digite seu e-mail..."></label>
             </div>
         </div>
@@ -50,63 +52,35 @@
         <div class="pt2">
             <div id="local">
                 <label>Estado:</label>
-                <select size="1" required>
-                    <option value="al">Alagoas</option>
-                    <option value="ba">Bahia</option>
-                    <option value="ce">Ceará</option>
-                    <option value="ma">Maranhão</option>
-                    <option value="pb">Paraíba</option>
-                    <option value="pe">Pernanbuco</option>
-                    <option value="pi">Piauí</option>
-                    <option value="rn" selected>Rio Grande do Norte</option>
-                    <option value="se">Sergipe</option>
+                <select id="estado" name="idEstado" required>
+                    <option value="">Carregando estados...</option>
                 </select>
 
                 <label>Cidade:</label>
-                <select size="1" required>
-                    <option value="bj">Brejinho</option>
-                    <option value="ma" selected>Monte Alegre</option>
-                    <option value="mo">Mossoró</option>
-                    <option value="nt">Natal</option>
-                    <option value="pa">Parnamirim</option>
-                    <option value="sa">Santo Antônio</option>
+                <select id="cidade" name="idCidade" required>
+                    <option value=""> Selecione um estado</option>
                 </select>
 
                 <label>UBS:</label>
-                <select size="1" required>
-                    <option value="hm">Hospital e Maternidade Dr. Lavoisier Maia</option>
-                    <option value="nm">UBS Novo Monte</option>
-                    <option value="ldm">UBS Lagoa do Mato</option>
-                    <option value="sl">UBS Santa Luzia</option>
-                    <option value="be">UBS Bairro da Esperança</option>
-                    <option value="bf">UBS Bairro das Flores</option>
-                    <option value="co">UBS Comum</option>
-                    <option value="fo">UBS Fontes</option>
-                    <option value="pg">UBS Professor Gaspar</option>
-                    <option value="so">UBS Sobrado</option>
+                <select id="ubs" name="idUbs" required>
+                    <option value="">Selecione uma cidade primeiro</option>
                 </select>
 
                 <label>Tipos de Consultas</label>
-                <select size="1" required>
-                    <option value="dt">Dentista</option>
-                    <option value="vd">Visita e atendimento domiciliar</option>
-                    <option value="va">Vacinação</option>
-                    <option value="cr">Curativos</option>
-                    <option value="pp">Pré-natal e puerpério</option>
-                    <option value="tp">Teste do pezinho</option>
-                    <option value="sh">Teste de sífilis e HIV</option>
-                    <option value="tg">Teste de grávidez</option>
-                    <option value="pf">Planejamento familiar</option>
-                    <option value="ct">Controle do tabagismo</option>
-                    <option value="am">Atendimento médico</option>
-                    <option value="ou">Outro</option>
+                <select id="tipoConsulta" name="idTipoConsulta" required>
+                    <option value=""> Carregando tipos...</option>
+                </select>
+
+                <label>Horário:</label>
+                <select id="horario" name="idHorarios" required>
+                    <option value="">Carregando horários...</option>
                 </select>
             </div>
-            <label>Motivo: <textarea name="consulta" id="comentario"
+            <label>Motivo: <textarea name="consulta" id="comentario" rows="10"
                     placeholder="Conte-nos o que estás sentido  e/ou o motivo da consulta..."></textarea></label>
         </div>
         <div class="botoes">
-            <button class="button-enviar" type="submit" onclick="en()">Enviar</button>
+            <button class="button-enviar" type="submit">Enviar</button>
             <button class="button-apagar" type="reset" onclick="lixo()">Apagar tudo</button>
             <button class="button-ajuda" type="button" onclick="aj()">Ajuda?</button>
         </div>
@@ -145,7 +119,7 @@
         <p class="copy">© 2026 UBS CONECTA. Todos os direitos reservados.</p>
     </footer>
 
-    <script src="ubs_conecta.js"></script>
+    <script src="ficha.js"></script>
 </body>
 
 </html>

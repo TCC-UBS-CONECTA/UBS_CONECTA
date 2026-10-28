@@ -1,6 +1,6 @@
-
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,7 +14,7 @@
 
 
 <body>
-     <header>
+    <header>
         <div class="logomarca">
             <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgf41pwBOzpV8SNo_nYFOdOALQ44OQ4b7UvVzKovz7TGHJqogyJ_ce8-MPmmr3lJuZpzsmEaelJ2c6ZZmJ2yM0a1foCkG8gHvr-DVrdCvhR7ZFl2fOUjuYYROwtCXpkP2DKMsBqxusFSozHhijh3Ne1ars5VFzzF-1WrKqMsklK3A1EaNhH-x3qAVrlOwI/s320-rw/UBS%20CONECTA%20-%20LOGO%20ORIGEM.png"
                 onclick="home('#home')">
@@ -34,7 +34,9 @@
             <div class="login-menu">
                 <h3>Acesse sua conta</h3>
                 <a href="pg_login.html">Entrar uma conta</a>
-                 <center><hr></center>
+                <center>
+                    <hr>
+                </center>
                 <a href="pg_registro.html">Criar uma conta</a>
 
             </div>
@@ -56,7 +58,7 @@
 
         <main>
 
-            <h2>Olá, Dr. João!</h2>
+            <h2>Olá, <span id="nome-profissional">Profissional </span>!</h2>
             <p>Bem-vindo à área do profissional.</p>
 
             <section class="cards">
@@ -102,9 +104,14 @@
 
                 <h3>Informações do Profissional</h3>
 
-                <p><strong>Nome:</strong> Dr. João Silva</p>
-                <p><strong>Função:</strong> Médico</p>
-                <p><strong>Especialidade:</strong> Clínico Geral</p>
+                <p><strong>Nome:</strong> <span id="perfil-nome">Carregando...</span></p>
+                <p><strong>Função:</strong> <span id="perfil-cargo">Carregando...</span></p>
+                <p><strong>Especialidade:</strong> <span id="perfil-especialidade">Carregando...</span></p>
+                <p><strong>Conselho profissional:</strong> <span id="perfil-conselho">Carregando...</span></p>
+                <p><strong>Registro:</strong> <span id="perfil-registro">Carregando...</span></p>
+                <p><strong>Telefone:</strong> <span id="perfil-telefone">Carregando...</span></p>
+                <p><strong>E-mail:</strong> <span id="perfil-email">Carregando...</span></p>
+                <p><strong>UBS vinculada:</strong> <span id="perfil-ubs">Carregando...</span></p>
 
             </section>
         </main>
@@ -112,6 +119,7 @@
     <footer>
         <p class="copy">© 2026 UBS CONECTA. Todos os direitos reservados.</p>
     </footer>
+<script src="pg_profissional.js"></script>
 </body>
-</html>
 
+</html>
