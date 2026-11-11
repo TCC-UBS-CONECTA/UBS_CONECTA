@@ -1,0 +1,125 @@
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ficha de cadastro - UBS CONECTA</title>
+    <link rel="shortcut icon"
+        href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgf41pwBOzpV8SNo_nYFOdOALQ44OQ4b7UvVzKovz7TGHJqogyJ_ce8-MPmmr3lJuZpzsmEaelJ2c6ZZmJ2yM0a1foCkG8gHvr-DVrdCvhR7ZFl2fOUjuYYROwtCXpkP2DKMsBqxusFSozHhijh3Ne1ars5VFzzF-1WrKqMsklK3A1EaNhH-x3qAVrlOwI/s320-rw/UBS%20CONECTA%20-%20LOGO%20ORIGEM.png"
+        type="image/x-icon">
+    <link rel="stylesheet" href="ficha.css">
+    <script src="https://kit.fontawesome.com/ea68365d10.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.boxicons.com/3.0.8/fonts/basic/boxicons.min.css" rel="stylesheet">
+    <link href="https://cdn.boxicons.com/3.0.8/fonts/filled/boxicons-filled.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="logomarca">
+            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgf41pwBOzpV8SNo_nYFOdOALQ44OQ4b7UvVzKovz7TGHJqogyJ_ce8-MPmmr3lJuZpzsmEaelJ2c6ZZmJ2yM0a1foCkG8gHvr-DVrdCvhR7ZFl2fOUjuYYROwtCXpkP2DKMsBqxusFSozHhijh3Ne1ars5VFzzF-1WrKqMsklK3A1EaNhH-x3qAVrlOwI/s320-rw/UBS%20CONECTA%20-%20LOGO%20ORIGEM.png"
+                alt="Logomarca da UBS CONECTA" onclick="home('#')">
+            <a href="#" class="logo">UBS CONECTA</a>
+        </div>
+        <nav>
+            <a href="#" class="link">Início</a>
+            <a href="#contatos" class="link">Desenvolvedores</a>
+            <a href="ubs_conecta.html" class="link voltar">Voltar página inicial</a>
+        </nav>
+    </header>
+
+    <form id="form-ficha">
+        <div class="pt1">
+            <div id="perfil">
+                <i class="fa-solid fa-user-pen" id="fotinha"></i>
+            </div>
+            <div class="form-coluna">
+                <label>Nome completo: <input type="text" id="nome" name="nome" required
+                        placeholder="Digite seu nome completo..."></label>
+                <div class="form-linha">
+                    <label>CPF: <input type="text" id="cpf" name="cpf" required placeholder="XXX.XXX.XXX-XX"
+                            maxlength="14"></label>
+                    <label>RG: <input type="text" id="rg" name="rg" placeholder="XX.XXX.XXX-X" maxlength="12"></label>
+                    <label>Nascimento: <input type="date" id="dataNascimento" name="dataNascimento" required
+                            placeholder="XX/XX/XXXX" maxlength="10"></label>
+                    <label>Telefone/Celular: <input type="tel" id="telefone" name="telefone" required
+                            placeholder="(XX) XXXXX-XXXX" maxlength="15"></label>
+                </div>
+                <label>Email completo: <input type="email" id="email" name="email" required
+                        placeholder="Digite seu e-mail..."></label>
+            </div>
+        </div>
+
+        <div class="pt2">
+            <div id="local">
+                <label>Estado:</label>
+                <select id="estado" name="idEstado" required>
+                    <option value="">Carregando estados...</option>
+                </select>
+
+                <label>Cidade:</label>
+                <select id="cidade" name="idCidade" required>
+                    <option value=""> Selecione um estado</option>
+                </select>
+
+                <label>UBS:</label>
+                <select id="ubs" name="idUbs" required>
+                    <option value="">Selecione uma cidade primeiro</option>
+                </select>
+
+                <label>Tipos de Consultas</label>
+                <select id="tipoConsulta" name="idTipoConsulta" required>
+                    <option value=""> Carregando tipos...</option>
+                </select>
+
+                <label>Horário:</label>
+                <select id="horario" name="idHorarios" required>
+                    <option value="">Carregando horários...</option>
+                </select>
+            </div>
+            <label>Motivo: <textarea name="consulta" id="comentario" rows="10"
+                    placeholder="Conte-nos o que estás sentido  e/ou o motivo da consulta..."></textarea></label>
+        </div>
+        <div class="botoes">
+            <button class="button-enviar" type="submit">Enviar</button>
+            <button class="button-apagar" type="reset" onclick="lixo()">Apagar tudo</button>
+            <button class="button-ajuda" type="button" onclick="aj()">Ajuda?</button>
+        </div>
+    </form>
+
+    <footer id="contatos">
+        <section class="rs">
+            <h3><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj5TvGR-zlnBB30xqu97QrsccfD3eIqdewlSAeUScaXj29FXJ0uq0zFFrbfrn1j1QyLufME5KC0c2uQvMdDGJ-HWnk8oX9qK3_qIKpPBbKf8C8s4PiaEB4pUCLAb5O6mvAXRHPg6-5AwLs8YBwLxK_BhhPBA0jnGnregj8OSKLmxqIrqXKVAH0x6BKsf9Q/s320-rw/UBS%20CONECTA%20-%20Vermelho%20e%20amarelo.png"
+                    onclick="home('#')" class="logo">
+                UBS CONECTA</h3>
+            <p>UBS Conecta - conectando pessoas, saúde e tecnologia em um só lugar.</p>
+        </section>
+
+        <section>
+            <h3>Horários e locais</h3>
+            <p>Todos os horários e locais das Ubs's estão na aba de <strong id="vermelho">Unidades</strong>. Clique <a
+                    href="und.html">aqui!</a></p>
+        </section>
+
+        <section>
+            <h3>Contato dos desenvolvedores</h3>
+            <p>📩E-mail: ubs@conecta.com</p>
+            <p>📞Telefone: (84) 9 1234-5678</p>
+        </section>
+
+
+        <section class="rs">
+            <h3>Redes socias</h3>
+            <p><img
+                    src="https://static.vecteezy.com/system/resources/previews/018/930/415/non_2x/instagram-logo-instagram-icon-transparent-free-png.png">Instagram:
+                @ubsconecta.ofc</p>
+            <p><img
+                    src="https://static.vecteezy.com/system/resources/previews/018/930/476/non_2x/facebook-logo-facebook-icon-transparent-free-png.png">Facebook:
+                /UBS Conecta</p>
+        </section>
+        <p class="copy">© 2026 UBS CONECTA. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="ficha.js"></script>
+</body>
+
+</html>
