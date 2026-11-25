@@ -23,13 +23,16 @@ body {
     line-height: 1.6;
     background-color: #f2f2f2;
 }
+
 a {
-  text-decoration: none;
-  color: inherit;
+    text-decoration: none;
+    color: inherit;
 }
+
 html {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
+
 .logo {
     font-size: 24px;
     font-weight: 700;
@@ -48,12 +51,16 @@ html {
 .login-details summary {
     list-style: none;
     cursor: pointer;
-    font-size: 22px;
+    font-size: 18px;
+    color: var(--branco);
+    font-weight: 500;
+    letter-spacing: 0px;
 }
 
 .login-details summary::-webkit-details-marker {
     display: none;
 }
+
 
 .login-menu {
     position: absolute;
@@ -67,25 +74,37 @@ html {
     border-radius: 12px;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
     text-align: center;
-    
-}
-.login-menu a{
-  padding: 6px 2%;
-  background: var(--verde);
-  color: #fff;
-  border-radius: 5px;
-}
-
-.login-menu hr{
-  width: 60%;
-  border: 1px solid #000;
-  border-radius: 5px;
-  margin: 10px 0px 10px 0px;
 
 }
 
-.login-menu h3{
-  margin-bottom: 10px;
+.login-menu a {
+    background: var(--vermei);
+    color: #fff;
+    border-radius: 5px;
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.login-menu hr {
+    width: 100%;
+    border: 1px solid #000;
+    border-radius: 5px;
+    margin: 10px 0;
+
+
+}
+
+.login-menu h4 {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.login-menu h4 strong {
+    color: var(--verde);
 }
 
 
@@ -144,6 +163,10 @@ aside {
     padding: 20px;
 }
 
+aside .menu-fixo {
+    position: sticky;
+    top: 20px;
+}
 
 aside h3 {
     margin-bottom: 20px;
@@ -159,7 +182,7 @@ aside a {
 }
 
 aside a:hover {
-    background-color: #198754;
+    background-color: rgba(13, 71, 161, 0.7);
     color: white;
 }
 
@@ -192,6 +215,7 @@ main h2 {
 
 .card h3 {
     margin-bottom: 15px;
+    font-size: 30px;
 }
 
 
@@ -206,7 +230,7 @@ button {
     padding: 10px;
     margin-top: 10px;
     border-radius: 5px;
-    cursor: no-drop;
+    cursor: pointer;
 }
 
 .agenda {
@@ -219,14 +243,69 @@ button {
 
 .agenda h3 {
     margin-bottom: 15px;
+    color: var(--azul);
+}
+
+.agenda p{
+    color: #666;
 }
 
 
-.consulta {
+.agenda-item {
     padding: 12px;
     border-bottom: 1px solid #ddd;
+
 }
 
+#mensagem-agenda {
+    color: var(--cinza);
+    font-size: 14px;
+    margin: 15px 0;
+}
+
+#lista-agenda {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.agenda-item {
+    padding: 15px;
+    background-color: rgba(13, 71, 161, 0.05);
+    border-left: 4px solid var(--azul);
+    border-radius: 8px;
+}
+
+.agenda-item strong {
+    color: var(--azul);
+    margin-right: 8px;
+}
+
+.agenda-item p {
+    margin: 0;
+}
+
+
+
+.consultas {
+    background-color: white;
+    margin-top: 30px;
+    padding: 20px;
+    border-radius: 8px;
+    top: 220px;
+}
+
+
+.consultas h3 {
+    margin-bottom: 15px;
+}
+
+
+.consulta-item {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+
+}
 
 .perfil {
     background-color: white;
@@ -246,14 +325,16 @@ button {
 }
 
 .copy {
-  grid-column: 1/-1;
-  text-align: center;
+    grid-column: 1/-1;
+    text-align: center;
 }
-footer{
+
+footer {
     background-color: white;
     padding: 5px 0px 5px 0px;
 }
-.logomarca img{
+
+.logomarca img {
     object-fit: cover;
     filter: drop-shadow(0px 1px 1px var(--cinza));
 }
@@ -263,49 +344,61 @@ footer{
     header {
         padding: 12px 3%;
     }
+
     .logo {
         font-size: 20px;
     }
+
     header nav {
         gap: 10px;
         flex-wrap: wrap;
         justify-content: center;
     }
+
     header nav a {
         font-size: 14px;
     }
+
     .container {
         padding-top: 70px;
     }
+
     aside {
         width: 180px;
         padding: 15px;
     }
+
     aside a {
         font-size: 14px;
         padding: 9px;
     }
+
     main {
         padding: 25px;
     }
+
     .cards {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 20px;
     }
+
     .card {
         width: 100%;
     }
+
     .card:last-child {
         grid-column: 1 / -1;
     }
 
 }
+
 @media (max-width: 600px) {
 
     body {
         overflow-x: hidden;
     }
+
     header {
         position: relative;
         flex-direction: column;
@@ -313,13 +406,16 @@ footer{
         padding: 12px 15px;
         text-align: center;
     }
+
     .logomarca {
         justify-content: center;
         align-items: center;
     }
+
     .logo {
         font-size: 20px;
     }
+
     header nav {
         width: 100%;
         display: flex;
@@ -327,32 +423,38 @@ footer{
         flex-wrap: wrap;
         gap: 8px;
     }
+
     header nav a {
         font-size: 13px;
         padding: 4px 6px;
     }
+
     .login-menu {
         right: 50%;
         transform: translateX(50%);
         width: 250px;
         z-index: 1000;
     }
+
     .container {
         display: flex;
         flex-direction: column;
         padding-top: 0;
     }
-        aside {
+
+    aside {
         width: 100%;
         min-height: auto;
         padding: 15px;
         background-color: #fff;
         border-bottom: 1px solid #ddd;
     }
+
     aside h3 {
         text-align: center;
         margin-bottom: 12px;
     }
+
     aside a {
         display: inline-block;
         padding: 8px 12px;
@@ -360,50 +462,356 @@ footer{
         border-radius: 5px;
         font-size: 14px;
     }
+
     main {
         width: 100%;
         padding: 25px 15px;
     }
+
     main h2 {
         font-size: 25px;
     }
-    main > p {
+
+    main>p {
         font-size: 14px;
     }
+
     .cards {
         display: flex;
         flex-direction: column;
         gap: 15px;
         margin-top: 25px;
     }
+
     .card {
         width: 100%;
         padding: 18px;
     }
+
     .card h3 {
         font-size: 18px;
     }
+
     .card p {
         font-size: 14px;
     }
+
     .card button {
         width: 100%;
     }
+
     .perfil {
         margin-top: 20px;
         padding: 18px;
     }
+
     .perfil h3 {
         font-size: 18px;
     }
+
     .perfil p {
         font-size: 14px;
     }
+
     footer {
         padding: 12px 15px;
         text-align: center;
     }
+
     .copy {
         font-size: 12px;
     }
+}
+
+main {
+    min-width: 0;
+}
+
+.cards .card,
+.consultas,
+.agenda,
+.perfil {
+    border-radius: 14px;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.04);
+}
+
+.card {
+    border: 1px solid #e7edf4;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(13, 71, 161, 0.08);
+}
+
+.consultas,
+.agenda,
+.perfil {
+    scroll-margin-top: 100px;
+}
+
+
+.consultas-cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 22px;
+}
+
+.consultas-cabecalho h3 {
+    color: var(--azul);
+    margin-bottom: 5px;
+    font-size: 20px;
+}
+
+.consultas-cabecalho p {
+    color: #666;
+    font-size: 15px;
+}
+
+.consultas-cabecalho button {
+    cursor: pointer;
+    margin-top: 0;
+}
+
+
+.filtros-consultas {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.filtros-consultas label {
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.filtros-consultas select {
+    padding: 10px 14px;
+    border: 1px solid #d6dce5;
+    border-radius: 8px;
+    background: #fff;
+    font-family: inherit;
+}
+
+
+.lista-consultas {
+    display: grid;
+    gap: 15px;
+}
+
+.consulta-item {
+    background: #f8fbff;
+    border: 1px solid #e0e8f2;
+    border-left: 4px solid var(--azul);
+    border-radius: 10px;
+    padding: 18px;
+}
+
+.consulta-item h4 {
+    color: var(--azul);
+    margin-bottom: 10px;
+}
+
+.consulta-item p {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.consulta-acoes {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.consulta-acoes button {
+    cursor: pointer;
+    padding: 10px 16px;
+    font-family: inherit;
+    font-weight: 500;
+}
+
+.btn-confirmar {
+    background: #008000;
+}
+
+.btn-recusar {
+    background: #E53935;
+}
+
+.consulta-acoes button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+
+@media (max-width: 600px) {
+    .consultas-cabecalho {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .consulta-acoes {
+        flex-direction: column;
+    }
+
+    .consulta-acoes button {
+        width: 100%;
+    }
+
+    .filtros-consultas {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .filtros-consultas select {
+        width: 100%;
+    }
+}
+
+
+.status-solicitada {
+    color: #806400;
+    background-color: rgba(255, 198, 0, 0.20);
+    border-left: 3px solid var(--amarelo);
+}
+
+.status-agendada {
+    color: var(--verde);
+    background-color: rgba(0, 128, 0, 0.10);
+    border-left: 3px solid var(--verde);
+}
+
+.status-recusada {
+    color: var(--vermei);
+    background-color: rgba(229, 57, 53, 0.10);
+    border-left: 3px solid var(--vermei);
+}
+
+.status-solicitada,
+.status-agendada,
+.status-recusada {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.consulta-item.consulta-solicitada {
+    background-color: rgba(255, 198, 0, 0.12);
+    border: 1px solid rgba(255, 198, 0, 0.40);
+    border-left: 5px solid var(--amarelo);
+}
+
+.consulta-item.consulta-agendada {
+    background-color: rgba(0, 128, 0, 0.08);
+    border: 1px solid rgba(0, 128, 0, 0.30);
+    border-left: 5px solid var(--verde);
+}
+
+.consulta-item.consulta-recusada {
+    background-color: rgba(229, 57, 53, 0.08);
+    border: 1px solid rgba(229, 57, 53, 0.30);
+    border-left: 5px solid var(--vermei);
+}
+
+.consulta-item {
+    transition: background-color 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.consulta-item:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.pacientes {
+    background-color: white;
+    padding: 25px;
+    border-radius: var(--cuiva);
+    box-shadow: var(--sombra);
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+.pacientes h3 {
+    color: var(--azul);
+    margin-bottom: 15px;
+}
+
+.pesquisa-pacientes {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 12px;
+    margin: 20px 0;
+}
+
+.pesquisa-pacientes i {
+    color: var(--azul);
+}
+
+.pesquisa-pacientes input {
+    width: 100%;
+    min-width: 0;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-family: inherit;
+    font-size: 14px;
+}
+
+.pesquisa-pacientes:focus-within {
+    border-color: var(--azul);
+}
+
+#mensagem-pacientes {
+    font-size: 14px;
+    margin: 15px 0;
+}
+
+#lista-pacientes {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.paciente-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+    background-color: rgba(13, 71, 161, 0.05);
+    border-left: 4px solid var(--azul);
+    border-radius: 8px;
+}
+
+.paciente-icone {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background-color: rgba(13, 71, 161, 0.10);
+    color: var(--azul);
+    font-size: 20px;
+}
+
+.paciente-info h4 {
+    color: var(--azul);
+    margin: 0 0 5px;
+}
+
+.paciente-info p {
+    font-size: 13px;
+    margin: 0;
 }

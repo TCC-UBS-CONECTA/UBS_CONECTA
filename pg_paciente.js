@@ -5,7 +5,6 @@ async function carregarPaciente() {
     const idUsuario = sessionStorage.getItem("idUsuario");
     const tipoUsuario = sessionStorage.getItem("tipoUsuario");
 
-    // Confere se o usuário está logado como paciente
     if (!idUsuario || tipoUsuario !== "PACIENTE") {
         alert("Faça login para acessar sua área de paciente.");
         window.location.href = "pg_login.html";
@@ -26,11 +25,11 @@ async function carregarPaciente() {
 
         console.log("Paciente encontrado:", paciente);
 
-        // Saudação
+        
         document.querySelector("#nome-paciente").textContent =
             paciente.nome ?? "Paciente";
 
-        // Informações do perfil
+        
         document.querySelector("#perfil-nome").textContent =
             paciente.nome ?? "Não informado";
 
@@ -40,7 +39,6 @@ async function carregarPaciente() {
         document.querySelector("#perfil-email").textContent =
             paciente.email ?? "Não informado";
 
-        // Calcula a idade usando a data de nascimento
         document.querySelector("#perfil-idade").textContent =
             calcularIdade(paciente.dataNascimento);
 
