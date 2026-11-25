@@ -28,7 +28,7 @@
         <details class="login-details">
             <summary>
                 <i class="fa-solid fa-circle-user" style="font-size: 30px; color: #fff;"></i>
-                <span id="nome-paciente"></span>
+                <span id="saudacao-paciente"></span>
             </summary>
 
             <div class="login-menu">
@@ -46,19 +46,16 @@
         <aside>
             <div class="menu-fixo">
                 <h3>Menu</h3>
-                <a href="#inicio"> <i class="fa-solid fa-house" style="font-size: 18px; color: #008000;"></i> Início</a>
-                <a href="#consultas"> <i class="fa-solid fa-calendar-check"
-                        style="font-size: 18px; color: #008000;"></i> Consultas</a>
-                <a href="ficha.html"><i class="fa-solid fa-file-medical" style="font-size: 18px; color: #008000;"></i>
-                    Solicitar atendimento</a>
-                <a href="#informacoes-pessoais"><i class="fa-solid fa-user"
-                        style="font-size: 18px; color: #008000;"></i> Meu Perfil</a>
+                <a href="#"> <i class="fa-solid fa-house" style="font-size: 18px; color: #008000; "></i> Início</a>
+                <a href="#consultas"> <i class="fa-solid fa-calendar-check" style="font-size: 18px; color: #008000;"></i> Consultas</a>
+                <a href="#btn-solicitar"><i class="fa-solid fa-file-medical" style="font-size: 18px; color: #008000;"></i> Solicitar atendimento</a>
+                <a href="#informacoes-pessoais"><i class="fa-solid fa-user" style="font-size: 18px; color: #008000;"></i> Meu Perfil</a>
             </div>
         </aside>
 
 
         <main>
-            <h2 id="saudacao-paciente">Olá, Paciente!</h2>
+            <h2 id="nome-paciente">Olá, Paciente!</h2>
             <p>Bem-vindo à sua área de saúde.</p>
 
 
@@ -111,16 +108,11 @@
 
                 </div>
 
-                <p id="mensagem-consultas" role="status">
-                    Carregando consultas...
-                </p>
+                <p id="mensagem-consultas" role="status"> Carregando consultas... </p>
 
                 <div id="lista-consultas" class="lista-consultas"></div>
 
-                <a href="ficha.html" class="btn-solicitar">
-                    <i class="fa-solid fa-calendar-plus"></i>
-                    Solicitar novo atendimento
-                </a>
+                <a href="ficha.html" class="btn-solicitar" id="btn-solicitar"> <i class="fa-solid fa-calendar-plus"></i> Solicitar novo atendimento </a>
 
             </section>
 

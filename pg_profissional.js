@@ -416,7 +416,7 @@ function formatarData(data) {//aqui formata a data para o formato "dd/mm/yyyy à
     return `${dia} às ${horario}`;
 }
 
-/* 
+
 function atualizarPacientes(consultas) {//aqui atualiza a lista de pacientes do profissional com as consultas agendadas para o dia atual
 
     const pacientes = new Map();
@@ -508,7 +508,7 @@ function exibirPacientes() {
         const detalhes = document.createElement("p");
 
         detalhes.textContent =
-            `ID: ${paciente.id} | ${paciente.totalConsultas} consulta(s)`;
+            `ID: ${paciente.id} | ${paciente.totalConsultas} consulta(s)`;//mostra o id do paciente e a quantidade de consultas que ele tem
 
         info.append(nome, detalhes);
 
@@ -517,4 +517,4 @@ function exibirPacientes() {
         lista.appendChild(item);
     });
 }
- */
+
