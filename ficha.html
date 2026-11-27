@@ -51,19 +51,19 @@
 
         <div class="pt2">
             <div id="local">
-                <label>Estado:</label>
+                <label for="estado">Estado:</label>
                 <select id="estado" name="idEstado" required>
-                    <option value="">Carregando estados...</option>
+                    <option value="1">Rio Grande do Norte</option>
                 </select>
 
-                <label>Cidade:</label>
+                <label for="cidade">Cidade:</label>
                 <select id="cidade" name="idCidade" required>
-                    <option value=""> Selecione um estado</option>
+                    <option value="87">Monte Alegre</option>
                 </select>
 
-                <label>UBS:</label>
+                <label for="ubs">UBS:</label>
                 <select id="ubs" name="idUbs" required>
-                    <option value="">Selecione uma cidade primeiro</option>
+                    <option value="4">UBS de Lagoa do Mato</option>
                 </select>
 
                 <label>Tipos de Consultas</label>
@@ -71,17 +71,75 @@
                     <option value=""> Carregando tipos...</option>
                 </select>
 
-                <label>Horário:</label>
-                <select id="horario" name="idHorarios" required>
-                    <option value="">Carregando horários...</option>
-                </select>
+                <div class="motivo-consulta">
+                    <label for="comentario">Motivo da consulta: </label>
+                    <textarea name="consulta" id="comentario" rows="10" requerid
+                        placeholder="Informe o que está sentindo ou o motivo da consulta..."></textarea>
+                </div>
             </div>
-            <label>Motivo: <textarea name="consulta" id="comentario" rows="10"
-                    placeholder="Conte-nos o que estás sentido  e/ou o motivo da consulta..."></textarea></label>
+
+            <div class="agendamento">
+                    <h3>Agendamento da consulta: </h3>
+
+                    <div class="calendario">
+                        <div class="calendario-header">
+
+                            <button type="button" id="mesAnterior" aria-label="Mês anterior"> &#10094; </button>
+
+                            <h3 id="mesAno"></h3>
+
+                            <button type="button" id="proximoMes" aria-label="Próximo mês"> &#10095; </button>
+
+                        </div>
+
+                        <div class="calendario-semana">
+                            <span>Dom</span>
+                            <span>Seg</span>
+                            <span>Ter</span>
+                            <span>Qua</span>
+                            <span>Qui</span>
+                            <span>Sex</span>
+                            <span>Sáb</span>
+                        </div>
+
+                        <div id="diasCalendario" class="calendario-dias">
+                        </div>
+
+                        <div class="calendario-legenda">
+                            <span>
+                                <i class="legenda-disponivel"></i> Disponível </span>
+
+                            <span>
+                                <i class="legenda-indisponivel"></i> Indisponível </span>
+
+                        </div>
+
+                        <p id="mensagemCalendario" aria-live="polite"> Carregando horários... </p>
+                    </div>
+
+                    <div id="areaTurnos" hidden>
+                        <h4 id="dataSelecionada"></h4>
+
+                        <label>Selecione o turno:</label>
+
+                        <div class="turnos">
+                            <button type="button" class="botao-turno" data-turno="MANHA"> Manhã </button>
+                            <button type="button" class="botao-turno" data-turno="TARDE"> Tarde </button>
+                        </div>
+
+                        <div id="listaHorarios" class="lista-horarios">
+                        </div>
+                    </div>
+                    <input type="hidden" id="horario" name="idHorarios">
+
+                    <p id="resumoAgendamento" aria-live="polite">
+                    </p>
+
+                </div>
         </div>
         <div class="botoes">
             <button class="button-enviar" type="submit">Enviar</button>
-            <button class="button-apagar" type="reset" onclick="lixo()">Apagar tudo</button>
+            <button class="button-apagar" type="reset" onclick="lixo()">Limpar ficha</button>
             <button class="button-ajuda" type="button" onclick="aj()">Ajuda?</button>
         </div>
     </form>
